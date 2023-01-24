@@ -1,0 +1,8 @@
+#esquina-superior-derecha{
+    position:absolute;
+    color:white;
+}
+
+#esquina-superior-derecha:hover{
+    color:blue;
+}

@@ -1,0 +1,53 @@
+body{
+    background-color: black;
+}
+
+dl{
+    position: relative;
+    float: right;
+}
+
+li{
+    color: white;
+    display: block;
+    padding: 8px;
+    transition: transform .5s;
+}
+
+li:hover{
+    color: white;
+    transform: scale(1.5);
+}
+
+Foto de Perfil{
+    position: relative;
+    justify-content: center;
+}
+
+img{
+    position: relative;
+    justify-content: left;
+    transition: transform .5s;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+h2{ 
+    position: relative;
+    justify-content: right;
+    color: white;
+}
+
+p{  
+    position: relative;
+    justify-content: right;
+    color: white;
+}
+
+h4{
+    position: relative;
+    justify-content: right;
+    size: 3cm; 
+}

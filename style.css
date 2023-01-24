@@ -1,34 +1,53 @@
 body{
-    color: black;
+    background-color: black;
 }
 
 dl{
     position: relative;
-
+    float: right;
 }
 
 li{
     color: white;
+    display: block;
+    padding: 8px;
+    transition: transform .5s;
 }
 
 li:hover{
     color: white;
-    scroll-timeline: 5s;
+    transform: scale(1.5);
 }
 
 Foto de Perfil{
-
+    position: relative;
+    justify-content: center;
 }
 
-h2{
+img{
+    position: relative;
+    justify-content: left;
+    transition: transform .5s;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+h2{ 
+    position: relative;
+    justify-content: right;
     color: white;
-
 }
 
-p{
+p{  
+    position: relative;
+    justify-content: right;
     color: white;
 }
 
 h4{
-   size: 3cm; 
+    position: relative;
+    justify-content: right;
+    size: 3cm; 
 }

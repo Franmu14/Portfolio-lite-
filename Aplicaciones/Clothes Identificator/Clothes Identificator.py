@@ -16,8 +16,6 @@ datos_entrenamiento, datos_pruebas = datos['train'], datos['test']
 
 nombres_clases = metadatos.features['label'].names
 
-nombres_clases
-
 
 def normalizar(imagenes, etiquetas):
   imagenes = tf.cast(imagenes, tf.float32)
@@ -72,15 +70,15 @@ num_ej_pruebas = metadatos.splits["test"].num_examples
 print(num_ej_entrenamiento)
 print(num_ej_pruebas)
 
-TAMANO_LOTE = 32
+size_lote = 32
 
 
-datos_entrenamiento = datos_entrenamiento.repeat().shuffle(num_ej_entrenamiento).batch(TAMANO_LOTE)
-datos_pruebas = datos_pruebas.batch(TAMANO_LOTE)
+datos_entrenamiento = datos_entrenamiento.repeat().shuffle(num_ej_entrenamiento).batch(size_lote)
+datos_pruebas = datos_pruebas.batch(size_lote)
 
 import math
 
-historial = modelo.fit(datos_entrenamiento, epochs=5, steps_per_epoch= math.ceil(num_ej_entrenamiento/TAMANO_LOTE))
+historial = modelo.fit(datos_entrenamiento, epochs=5, steps_per_epoch= math.ceil(num_ej_entrenamiento/size_lote))
 
 plt.xlabel("# Epoca")
 plt.ylabel("Magnitud de pérdida")

@@ -26,12 +26,13 @@ min 9.18 al 9.25 muy bueno
 
 """La info procesada:"""
 
+from matplotlib.pyplot import pie, show
+import numpy as np
+
 clasif = ["penal","cabeza","normal-media distancia","normal-recibe al medio","normal-mano a mano-cruzando","normal-mano a mano-picando","normal-mano a mano-pasando","Otra Clasificación"]
 cantidad = [42,23,12,67,5,3,4,92]
 
-"""Me gustaría hacerle gráfico de torta pero no encuentro:"""
-
-plt.plot(clasif, cantidad)
+plt.pie(cantidad, labels = clasif)
 plt.show()
 
 """Para agregar cosas lo que podría hacer es subclasificar, no se me ocurren otras..."""

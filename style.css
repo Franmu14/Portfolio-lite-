@@ -5,49 +5,129 @@ body{
 dl{
     position: relative;
     float: right;
+    right: 80px;
 }
 
 li{
     color: white;
-    display: block;
+    display: inline;
     padding: 8px;
     transition: transform .5s;
 }
 
 li:hover{
     color: white;
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 
-Foto de Perfil{
+.presentacion{
+    top: 20px;
+    text-align: center;
+}
+
+
+
+.presentacion #FotodePerfil{
     position: relative;
-    justify-content: center;
+    top: 50px;
+    left: 200px;
+    border: 0.5cm;
+    border-style: solid;
+    border-color: white;
+    border-radius: 0%;
+}
+
+.presentacion p{
+    size: 220cm;
+    position: relative;
+    top: 10px;
+}
+
+p{
+    color: white;
+    text-align: center;
 }
 
 img{
     position: relative;
-    justify-content: left;
+    left: 100px;
     transition: transform .5s;
+    border-radius: 1cm;
+    border-color: white;
 }
 
 img:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
+
 
 h2{ 
     position: relative;
+    left: 230px;
+    bottom: 350px;
+    text-align: center;
     justify-content: right;
     color: white;
 }
 
-p{  
+h3{  
     position: relative;
+    left: 750px;
+    bottom: 250px;
+    text-align: center;
+    justify-content: right;
+    color: white;
+    height: 250px;
+    width: 450px;
+}
+
+h4{  
+    position: relative;
+    left: 250px;
+    bottom: 250px;
+    text-align: center;
     justify-content: right;
     color: white;
 }
 
-h4{
+span{
+    color:white;
+    display: block;
     position: relative;
-    justify-content: right;
-    size: 3cm; 
+    text-align: center;
+}
+
+ol{
+    color: white;
+    display: block;
+    padding: 8px;
+    transition: transform .5s;
+    text-align: center;
+}
+
+ol:hover{
+    color: white;
+    transform: scale(1.05);
+}
+
+ol li{
+    color: white;
+    display: inline;
+    padding: 8px;
+    transition: transform .5s;
+}
+
+ol li:hover{
+    color: white;
+    transform: scale(1.2);
+}
+
+h6{
+    color: white;
+    size: 100px;
+    text-align: center;
+}
+
+form{
+    text-align: center;
 }

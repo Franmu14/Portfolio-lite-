@@ -10,7 +10,7 @@ export default {
     return {
       houses: ['griffyndor', 'ravenclaw', 'hufflepuff', 'slytherin'],
       quiz: ref(json),
-      count: 24,
+      count: 0,
       g: 0,
       r: 0,
       h: 0,
@@ -54,17 +54,13 @@ export default {
 }
 </script>
 <template>
-  <div>
-    <h1>Json with the questions</h1>
-  </div>
-
-  <div v-if="quizMode" class="quiz">
-    <h2>{{ quiz[count].title }}</h2>
-    <div v-for="(answer, index) in quiz[count].answers" v-bind:key="answer.title">
-      <input v-model="option" type="radio" :value="index" />
+    <div v-if="quizMode" class="quiz">
+    <h2 class="title">{{ quiz[count].title }}</h2>
+    <div v-for="(answer, index) in quiz[count].answers" v-bind:key="answer.title" class="answers">
+      <input v-model="option" type="radio" :value="index" class="input" />
       <label>{{ answer.title }}</label>
     </div>
-    <button @click="addPoints()">Next</button>
+    <button class="button" @click="addPoints()">Next</button>
   </div>
   <div v-else>
     Welcome to house:
@@ -72,8 +68,95 @@ export default {
   </div>
 </template>
 
-<style>
-button {
-  border: none;
+<style scoped>
+
+.quiz {
+  position: relative;
+  width: 560px;
+  height: 620px;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid;
+  border-color: white;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 200px;
 }
+
+
+
+.title{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 500;
+  position: absolute;
+  top: 65px;
+  justify-content: center;
+  display: flex;
+  widows: 100%;
+  text-align: center;
+}
+
+
+.title::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 1.5s;
+}
+
+.title:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.answers{
+  display: inline;
+  height: 10px;
+  width: 80%;
+  position: relative;
+  left: 10px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+
+.answers:hover{
+  animation: infinite;
+}
+
+.input{
+  cursor: url('../archivos/varita.jpg'), pointer;
+  accent-color: blue;
+  border-radius: 0;
+}
+
+.button{
+  position: absolute;
+  bottom: 65px;
+  border-radius: 10px;
+  padding: 10px 30px;
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.button:hover{
+  background-color: turquoise;
+  color: white;
+  transform: scale(1.5);
+}
+
 </style>

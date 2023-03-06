@@ -6,9 +6,12 @@ import { RouterView } from 'vue-router'
   <body>
     <audio autoplay src="./src/archivos/Hedwig Theme.mp3"></audio>
 
-    <div class="main">
-      <RouterView> </RouterView>
+    <div class="main" v-bind:class="{ 'fade-enter-active': $route.meta.transition }">
+      <transition name="fade">
+        <RouterView></RouterView>
+      </transition>
     </div>
+    
   </body>
 </template>
 

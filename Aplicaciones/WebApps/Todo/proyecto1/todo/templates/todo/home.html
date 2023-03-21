@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--{% extends 'todo/layout.html' %}-->
+
+{% extends 'todo/layout.html' %}
+
+{% block content %}
+
+<h1>Lista de tareas</h1>
+
+<ul>
+    {% for tarea in tareas %}
+    <li> {{ tarea }} </li>
+    <button><a href="{% url 'eliminar' tarea.id %}"></a>Eliminar</button>
+    <button><a href="{% url 'editar' tarea.id %}"></a>Editar</button>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+
+</body>
+
+</html>
+

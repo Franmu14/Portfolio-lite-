@@ -1,0 +1,18 @@
+*{
+    align-items: center;
+}
+
+  
+#registro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1rem;
+  }
+
+
+input, button {
+    margin-top: 0.5rem;
+  }
